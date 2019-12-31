@@ -1,0 +1,22 @@
+{% set blox = htmlWebpackPlugin.options.blox %}
+{% set title = blox.page.title %}
+
+{% extends "layout/layout.njk" %}
+
+{% block content %}
+    <section class="container text-center pt-6 pt-lg-8 pb-8 pb-lg-9">
+        <p class="lead">Personal Information</p>
+        <h1 class="mw-800 mx-auto h3 pt-2">Please provide the following information to see results</h1>
+        <p class="lead mw-800 mx-auto pb-5">We promise your email will never be used for spam or given to anyone else.</p>
+        <form id="confirmation-form"
+        class="subscribe-form form-inline justify-content-lg-end flex-nowrap mw-600 mx-auto mb-6"
+        onsubmit="submitForm(); return false;">
+            <input id="email" class="form-control w-100" type="email" placeholder="Email Address" required>
+            <button class="btn btn-primary" id="submitBtn" type="submit">Submit</button>
+        </form>
+    </div>
+    <a class="btn btn-link mt-5" href="/questions/page-1/">Back to Quiz</a>
+</div>
+
+</section>
+{% endblock %}
